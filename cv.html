@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang = "id">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CV - Nadhia Liyana Khoerunnisa</title>
+        <link rel ="stylesheet" href="cv.css" />
+    </head>
+
+    <body> 
+        <header>
+            <h1> NADHIA LIYANA KHOERUNNISA </h1> 
+            <p> </p>
+
+            <div style="text-align: center;">
+                <img src="fotoku1.jpeg" width="165" height="157">
+            </div>
+
+            <button id = "drakmodeBtn">&#127776 Dark Mode</button>
+        </header>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#pendidikan">Pendidikan</a>
+            <a href="#pengalaman">Pengalaman</a>
+            <a href="#kemampuan">Kemampuan</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+
+        <section id="about">
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah Seorang mahasiswa Sarjana Terapan di UGM, Program Studi Teknologi Survei dan Pemetaan,
+            saya memiliki kemampuan public speaking, pengolahan data ukuran, serta minat dalam menulis.
+            Aktif dalam kepanitiaan, pengabdian masyarakat terpencil, serta memiliki pengalaman mengajar
+            siswa SD dan SMP. </p>
+        </section>
+
+        <section id="pendidikan">
+            <h2>Pendidikan Saya</h2>
+
+            <div class="filter">
+                <button onclick="filterPendidikan('all')">All</button>
+                <button onclick="filterPendidikan('SMP')">SMP</button>
+                <button onclick="filterPendidikan('SMA')">SMA</button>
+                <button onclick="filterPendidikan('Universitas')">Universitas</button>
+            </div>
+
+            <div class="filter-container">
+                <div class="pendidikan SMP" >MTS Darul Falah</div>
+                <div class="pendidikan SMA" >MAS Persis Tarogong</div>
+                <div class="pendidikan Universitas" >Universitas Gadjah Mada</div>
+            </div>
+            
+        </section>
+
+
+        <section id="pengalaman">
+            <h2>Pengalaman</h2>
+
+            <div class="filter">
+                <button onclick="filterPengalaman('all')">All</button>
+                <button onclick="filterPengalaman('kepanitiaan')">Kepanitiaan</button>
+                <button onclick="filterPengalaman('pengabdian')">Pengabdian</button>
+                <button onclick="filterPengalaman('Kerja')">Kerja</button>
+            </div>
+
+            <div class="filter-container">
+                <div class="pengalaman kepanitiaan">2026 | Kaka Asuh | OSPEK Departemen Teknologi Kebumian</div>
+                <div class="pengalaman pengabdian">2025 | Pengabdian | Membersihakn Sungai Winongo bersama mapagama</div>
+                <div class="pengalaman kepanitiaan">2025 | Panitia | OSPEK Program Studi</div>
+                <div class="pengalaman Kerja">2025 | Guru | Mengajar Matematika SMP</div>
+                <div class="pengalaman kepanitiaan">2024 | Kepanitiaan | Staf Acara KPRM SV UGM</div>
+                <div class="pengalaman pengabdian">2024 | Pengabdian | PLKJ</div>
+                <div class="pengalaman kepanitiaan">2024 | Kepanitiaan | Divisi Acara PLKJ</div>
+                <div class="pengalaman karya">2023 | Karya | Karya Tulis Ilmiah</div>
+                <div class="pengalaman kepanitiaan">2021 | Kepanitiaan | Divisi Acara Musyawarah Umum</div>
+
+             </div>
+        </section>
+
+        <section id="kemampuan">
+            <h2>Kemampuan</h2>
+
+            <div class="filter">
+                <button onclick="filterSkill('all')">All</button>
+                <button onclick="filterSkill('teknis')">Teknis</button>
+                <button onclick="filterSkill('personal')">Personal</button>
+            </div>
+
+
+            <div class="filter-container">
+                <div class="skill teknis">
+                    <h3>Kemampuan Teknis</h3>
+                    <ul>
+                        <li>Microsoft Office (Word, PowerPoint, Excel)</li>
+                        <li>Google Workspace (Docs, Spreadsheet, Slides, Drive, Gemini)</li>
+                        <li>Google Colab (dasar)</li>
+                        <li>Pengolahan data (input, pengolahan, visualisasi dasar)</li>
+                        <li>Pengolahan data satelit (dasar)</li>
+                        <li>Fotogrametri (dasar)</li>
+                        <li>Penelusuran referensi ilmiah (Google Scholar, Google Books)</li>
+                    </ul>
+                </div>
+
+
+                <div class="skill personal">
+                    <h3>Kemampuan Personal</h3>
+                    <ul>
+                        <li>Public Speaking</li>
+                        <li>Kerja Sama Tim</li>
+                        <li>Kemampuan mengolah dan menganalisis data</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Kontak</h2>
+            <h3>Info Kontak</h3>
+            <div class="info-kontak">
+                <p>Email : nadhialiyanakhoerunnisa@mail.ugm.ac.id</p>
+                <p>No.HP : 0895402345020</p>
+                <p>LinkedIn : 
+                <a href="https://www.linkedin.com/in/nadhia-liyana-khoerunnisa">klik di sini</a>
+                </p>
+            </div>
+
+            <h3>Kirim Pesan</h3>
+
+            <form id="contactForm">
+                <input type="text" id="nama" placeholder="Nama" />
+                <input type="email" id="email" placeholder="Email" />
+                <textarea id="pesan" placeholder="Pesan"></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>© 2026 Nadhia Liyana Khoerunnisa | Praktikum SIG WEB</p>
+        </footer>  
+
+         <script src="CV.js"></script>
+    </body>
+</html>

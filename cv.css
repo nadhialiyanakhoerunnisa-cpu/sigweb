@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+/* HEADER */
+header {
+  background: rgb(4, 84, 87);
+  color: rgb(127, 197, 211);
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+            width: 150px;
+            border: 3px solid rgb(127, 197, 211);
+        }
+    .foto {
+            margin: 20px;
+        }
+
+/* NAVBAR */
+nav {
+  background: rgb(127, 197, 211);
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+nav a:hover {
+  color: navy;
+}
+
+/* SECTION */
+section {
+  padding: 40px;
+}
+
+/* FILTER BUTTON */
+.filter {
+  margin-bottom: 20px;
+}
+
+.filter button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: none;
+  background: rgb(58, 90, 96);
+  color: rgb(180, 236, 247);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter button:hover {
+  background: rgb(17, 106, 120);
+}
+
+/* CONTAINER ITEM */
+.filter-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* BOX ITEM */
+.pendidikan,
+.pengalaman,
+.skill {
+  background: rgb(152, 203, 206);
+  padding: 20px;
+  width: 220px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.pendidikan:hover,
+.pengalaman:hover,
+.skill:hover {
+  transform: scale(1.05);
+}
+
+/* LIST SKILL */
+.skill ul {
+  padding-left: 20px;
+}
+
+/* KONTAK */
+.info-kontak {
+  margin-bottom: 20px;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#contact button {
+  padding: 10px;
+  background: rgb(13, 122, 135);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background: darkblue;
+}
+
+/* FOOTER */
+footer {
+  background: rgb(4, 84, 87);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* DARK MODE */
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark nav {
+  background: #222;
+}
+
+.dark .pendidikan,
+.dark .pengalaman,
+.dark .skill {
+  background: #333;
+}
