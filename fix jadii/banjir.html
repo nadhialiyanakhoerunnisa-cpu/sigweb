@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My WebGIS - Nama</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+
+    <!-- Data GeoJSON -->
+    <script type="text/javascript" src="lokasi_evakuasi.js"></script>
+
+    <style>
+      #map {
+        width: 1500px;
+        height: 480px;
+      }
+    </style>
+  </head>
+
+  <body id="home">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-secondary shadow fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">WebGIS Bencana Banjir</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#galery">Galery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar-end -->
+
+    <!-- 0-Section -->
+    <section class="nolsection">
+      <img src="img/banjir5.jpg" alt="Banjir" width="1400" height="535" />
+    </section>
+    <!-- 0-Section-end -->
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h1>About This Website</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <p>Website ini berisi tentang informasi daerah rawan banjir di daerah perkotaan Yogyakarta. Akibat pemanasan global, hujan berintensitas tinggi menyebabkan sungai meluap.</p>
+          </div>
+
+          <div class="col">
+            <p>BPBD DIY mencatat banjir terjadi di beberapa wilayah. Prioritas penanganan diberikan kepada warga terdampak dan pengungsi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About-end -->
+
+    <!-- Galery -->
+    <section id="galery">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h1>Galery</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="img/banjir2.jpg" class="card-img-top" />
+              <div class="card-body">
+                <p class="text-center">Banjir di kawasan perkotaan</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="img/banjir3.jpg" class="card-img-top" />
+              <div class="card-body">
+                <p class="text-center">Rumah tergenang banjir</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="img/banjir4.jpg" class="card-img-top" />
+              <div class="card-body">
+                <p class="text-center">Kawasan ditinggal penghuni</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Galery-end -->
+
+    <!-- WebGIS -->
+    <h1 class="text-center">WebGIS</h1>
+    <div id="map"></div>
+
+    <script>
+      var map = L.map("map").setView([-7.80496, 110.36417], 12);
+
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap",
+      }).addTo(map);
+
+      // GeoJSON
+      L.geoJSON(lokasi).addTo(map);
+    </script>
+    <!-- WebGIS-end -->
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h1>Contact Us</h1>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Pesan</label>
+                <textarea class="form-control"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact-end -->
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <p>Created with love by Nama Mahasiswa</p>
+    </footer>
+    <!-- Footer-end -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
